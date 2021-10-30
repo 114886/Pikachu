@@ -7,37 +7,115 @@
   <meta name="viewport"
     content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
   <title>皮神</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div class="skin">
-    <div class="sss left"></div>
-    <div class="sss right"></div>
-    <div class="eye left"></div>
-    <div class="eye right"></div>
-    <div class="nose">
-      <div class="yuan"></div>
-    </div>
-    <div class="face left"></div>
-    <div class="face right"></div>
-    <div class="mouth">
-      <div class="up">
-        <div class="xxx"></div>
-        <div class="qqq left"></div>
-        <div class="qqq right"></div>
+  <style id="demo2"></style>
+  <div id="demo"></div>
+  <div id="buttons">
+    <button id="btnPause">暂停</button>
+    <button id="btnPlay">播放</button>
+    <button id="btnSlow">慢速</button>
+    <button id="btnNormal">中速</button>
+    <button id="btnFast">快速</button>
+  </div>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    #buttons {
+      position: fixed;
+      right: 20px;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    #buttons>button {
+      margin-bottom: 15px;
+      padding: 4px 8px;
+      border: none;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      background: rgba(87, 87, 85, 0.5);
+      backdrop-filter: blur(1px);
+      cursor: pointer;
+    }
+
+    #buttons>button:hover{
+      background: rgba(255, 255, 0, 0.5);
+    }
+
+    #demo2 {
+      display: none;
+    }
+
+    #demo {
+      position: fixed;
+      height: 100vh;
+      bottom: 0;
+      right: 0;
+      width: 50vw;
+      overflow-y: auto;
+      background-color: rgba(41, 38, 38, 0.438);
+    }
+
+    #demo::-webkit-scrollbar {
+      display: none;
+    }
+
+    #html {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50vw;
+      height: 100vh;
+    }
+  </style>
+  <div id="html">
+    <div class="skin">
+      <div class="sss left"></div>
+      <div class="sss right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose">
+        <div class="yuan"></div>
       </div>
-      <div class="eee">
-        <div class="yuan1">
-          <div class="yuan2"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="mouth">
+        <div class="up">
+          <div class="xxx"></div>
+          <div class="qqq left"></div>
+          <div class="qqq right"></div>
+        </div>
+        <div class="eee">
+          <div class="yuan1">
+            <div class="yuan2"></div>
+          </div>
         </div>
       </div>
+      <div class="hand">
+        <img src="./images/2.gif">
+      </div>
     </div>
-    <div class="hand">
+    <div class="gun">
+      <img src="./images/6.gif">
     </div>
-    <audio src="./images/f-18-1-18-27.mp3" autoplay="autoplay"></audio>
   </div>
+  <script type="module" src="lun.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>

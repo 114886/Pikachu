@@ -1,4 +1,6 @@
-/* * {
+const string =
+`/*画一个可爱的皮卡丘*/
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,13 +10,16 @@
 *::before {
   box-sizing: border-box;
 }
-
+/*先给它上个皮肤
+*/
 .skin {
   height: 100vh;
   background: #ffe600;
   position: relative;
 }
 
+/*再来一个可爱的小鼻子
+*/
 .nose {
   position: relative;
   border: 10px solid black;
@@ -26,6 +31,8 @@
   top: 250px;
 }
 
+/*给它加个小特效
+*/
 @keyframes wave {
   0% {
     transform: rotate(0deg);
@@ -59,6 +66,9 @@
   left: -10px;
 }
 
+/*接下来要加眼睛了
+皮卡丘的眼睛是圆圆的（净说废话）
+*/
 .eye {
   position: absolute;
   border: 2px solid #000;
@@ -71,6 +81,8 @@
   border-radius: 50%;
 }
 
+/*让眼睛变得有神起来！
+*/
 .eye::before {
   content: '';
   border: 3px solid #000;
@@ -92,6 +104,9 @@
   transform: translateX(100px);
 }
 
+/*嘴巴肯定少不了啊，
+先来一个平时呆萌的表情
+*/
 .mouth {
   width: 180px;
   height: 100px;
@@ -119,6 +134,8 @@
   background: rgb(155, 1, 9);
 }
 
+/*再来一个"皮卡皮卡"
+*/
 .lip {
   border: 3px solid black;
   height: 30px;
@@ -177,6 +194,9 @@
   background: #ff485f;
 }
 
+/*还有标志性的两个红扑扑的脸蛋
+(❤ ω ❤) 卡哇伊
+*/
 .face {
   position: absolute;
   left: 50%;
@@ -200,6 +220,8 @@
   border-radius: 50%;
 }
 
+/*它生气可是会放电的哦！
+*/
 .face.left>img {
   transform: rotateY(180deg);
   transform-origin: 0 0;
@@ -209,72 +231,9 @@
   transform: translate(180px);
   background: rgb(255, 0, 0);
   border-radius: 50%;
-} */
-
-.hand >img{
-  position: absolute;
-  width: 100px;
-  top: -55px;
-  left: 2px;
-  animation: gundong 30s infinite linear;
 }
-
-.gun>img{
-  position: absolute;
-  width: 100px;
-  top: 0;
-  animation: gundong 30s infinite linear;
-}
-@keyframes gundong {
-  0% {
-    transform: translate(0,50px);
-  }
-  6.25% {
-    transform: translate(0,150px);
-  }
-  12.5% {
-    transform: translate(0,300px);
-  }
-  18.75% {
-    transform: translate(0,450px);
-  }
-  25% {
-    transform: translate(0,600px);
-  }
-  31.25% {
-    transform: translate(160px,600px);
-  }
-  37.5% {
-    transform: translate(320px,600px);
-  }
-  43.75% {
-    transform: translate(480px,600px);
-  }
-  50% {
-    transform: translate(640px,600px);
-  }
-  56.25% {
-    transform: translate(640px,450px);
-  }
-  62.5% {
-    transform: translate(640px,300px);
-  }
-  68.75% {
-    transform: translate(640px,150px);
-  }
-  75% {
-    transform: translate(640px,50px);
-  }
-  81.25% {
-    transform: translate(480px,50px);
-  }
-  87.5% {
-    transform: translate(320px,50px);
-  }
-  93.5% {
-    transform: translate(160px,50px);
-  }
-  100% {
-    transform: translate(0,50px);
-  }
-}
+/*完美
+快试着触摸它的鼻子和脸蛋吧
+(・∀・(・∀・(・∀・*)
+*/`
+export default string;
